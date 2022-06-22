@@ -15,19 +15,13 @@ public class ColourChanger : MonoBehaviour
     {
         Campbell = GetComponent<SpriteRenderer>();
         Campbell.enabled = false;
-        interval = Random.Range(1, 5);
+        interval = Random.Range(1.0f, 5.0f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(BOB) && Campbell.enabled)
-        {
-            Campbell.enabled = false;
-
-            timePassed = 0;
-            interval = Random.Range(1, 5);
-        }
+        
         if (timePassed >= interval)
         {
             if (bob2notcalled)
@@ -42,6 +36,22 @@ public class ColourChanger : MonoBehaviour
         }
     }
 
+    public void Healing()
+    {
+        if (Input.GetKeyDown(BOB) && Campbell.enabled)
+        {
+            Campbell.enabled = false;
+
+            timePassed = 0;
+            interval = Random.Range(1.0f, 5.0f);
+        }
+    }
+
+    void OnTriggerStay2D(Collider2D other)
+    {
+        
+    }
+
     IEnumerator bob2()
     {
         bob2notcalled = false;
@@ -51,7 +61,7 @@ public class ColourChanger : MonoBehaviour
         Campbell.enabled = false;
 
         timePassed = 0;
-        interval = Random.Range(1, 5);
+        interval = Random.Range(1.0f, 5.0f);
 
         bob2notcalled = true;
     }
