@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Main Menu.unity
+    guid: deb64312c8506804aaf9183c9f6a8acd
+  - enabled: 1
+    path: Assets/Scenes/Keyboard 2P.unity
+    guid: ae28679c6457165448871586d213d204
+  - enabled: 1
+    path: Assets/Scenes/Mouse.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Keyboard.unity
+    guid: deb295de42744c447a4a021830c54aba
   m_configObjects: {}
