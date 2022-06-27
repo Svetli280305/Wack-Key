@@ -17,6 +17,7 @@ public class CursorConfig : MonoBehaviour
 
         if (hit.collider && hit.collider.gameObject.tag == "mole" && Input.GetMouseButton(0))
         {
+            FindObjectOfType<ScoreBoard>().AddPoints();
             Debug.Log("20");
             hit.collider.gameObject.GetComponent<ColourChanger>().Healing();
         }
