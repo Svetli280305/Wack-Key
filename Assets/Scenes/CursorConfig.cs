@@ -15,10 +15,10 @@ public class CursorConfig : MonoBehaviour
     {
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
 
-        if (hit.collider && hit.collider.gameObject.tag == "mole" && Input.GetMouseButton(0))
+        if (hit.collider && hit.collider.gameObject.tag == "mole" && Input.GetMouseButtonDown(0))
         {
-            FindObjectOfType<ScoreBoard>().AddPoints();
-            Debug.Log("20");
+            ScoreBoard s = FindObjectOfType<ScoreBoard>();
+            s.AddPoints();
             hit.collider.gameObject.GetComponent<ColourChanger>().Healing();
         }
     }

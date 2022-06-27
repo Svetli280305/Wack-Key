@@ -2,21 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ScoreBoard : MonoBehaviour
 {
-    public float score;
-    public float pointsPerMole = 1;
-    public Text scoreText;
+    public int score;
+    public int pointsPerMole = 1;
+    public TextMeshProUGUI scoreText;
+
+    void Start()
+    {
+        UpdateScoreDisplay();
+    }
 
     public void AddPoints()
     {
         score += pointsPerMole;
-                UpdateScoreDisplay();
+        UpdateScoreDisplay();
+        Debug.Log(score);
     }
 
     public void UpdateScoreDisplay()
     {
-    scoreText.text = "Score: " + score;
+        scoreText.text = $"Score: {score}";
     }
 }
