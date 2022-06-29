@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ColourChanger : MonoBehaviour
 {
+    CircleCollider2D Taj;
     SpriteRenderer Campbell;
     public KeyCode BOB;
 
@@ -13,8 +14,10 @@ public class ColourChanger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Taj = GetComponent<CircleCollider2D>();
         Campbell = GetComponent<SpriteRenderer>();
         Campbell.enabled = false;
+        Taj.enabled = false;
         interval = Random.Range(1.0f, 5.0f);
     }
 
@@ -27,6 +30,7 @@ public class ColourChanger : MonoBehaviour
             if (bob2notcalled)
             {
                 Campbell.enabled = true;
+                Taj.enabled = true;
                 StartCoroutine(bob2());
             }
         }
@@ -41,6 +45,7 @@ public class ColourChanger : MonoBehaviour
         if (Input.GetKeyDown(BOB) && Campbell.enabled)
         {
             Campbell.enabled = false;
+            Taj.enabled = false;
 
             timePassed = 0;
             interval = Random.Range(1.0f, 5.0f);
@@ -59,6 +64,7 @@ public class ColourChanger : MonoBehaviour
         yield return new WaitForSeconds(2.0f);
 
         Campbell.enabled = false;
+        Taj.enabled = false;
 
         timePassed = 0;
         interval = Random.Range(1.0f, 5.0f);
