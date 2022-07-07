@@ -5,16 +5,18 @@ using TMPro;
 
 public class HighScoreDisplay : MonoBehaviour
 {
-    public TextMeshProUGUI nameText;
     public TextMeshProUGUI scoreText;
-    public void DisplayHighScore(string name, int score)
+    public void DisplayHighScore()
     {
-        nameText.text = name;
-        scoreText.text = string.Format("{0:000000}", score);
+        string text = "";
+        for (int i = 0; i < 5; i++)
+        {
+            text += $"{string.Format("{0:000000}", PlayerPrefs.GetInt($"score{i}") != null ? PlayerPrefs.GetInt($"score{i}") : 0)}\n";
+        }
+        scoreText.text = text;
     }
     public void HideEntryDisplay()
     {
-        nameText.text = "";
         scoreText.text = "";
     }
 }

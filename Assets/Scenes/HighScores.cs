@@ -7,12 +7,6 @@ public class HighScores : MonoBehaviour
     void Start()
     {
         // Adds some test data
-        AddNewScore("John", 4500);
-        AddNewScore("Max", 5520);
-        AddNewScore("Dave", 380);
-        AddNewScore("Steve", 6654);
-        AddNewScore("Mike", 11021);
-        AddNewScore("Teddy", 3252);
         UpdateDisplay();
     }
     void UpdateDisplay()
@@ -22,7 +16,7 @@ public class HighScores : MonoBehaviour
         {
             if (i < scores.Count)
             {
-                highScoreDisplayArray[i].DisplayHighScore(scores[i].name, scores[i].score);
+                highScoreDisplayArray[i].DisplayHighScore();
             }
             else
             {
