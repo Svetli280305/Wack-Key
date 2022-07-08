@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ColourChanger : MonoBehaviour
 {
+
     BoxCollider2D Taj;
     SpriteRenderer Campbell;
     public KeyCode BOB;
@@ -24,7 +25,6 @@ public class ColourChanger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         if (timePassed >= interval)
         {
             if (bob2notcalled)

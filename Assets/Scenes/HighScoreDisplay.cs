@@ -6,12 +6,18 @@ using TMPro;
 public class HighScoreDisplay : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
+
+    void Start()
+    {
+        DisplayHighScore();
+    }
+
     public void DisplayHighScore()
     {
         string text = "";
         for (int i = 0; i < 5; i++)
         {
-            text += $"{string.Format("{0:000000}", PlayerPrefs.GetInt($"score{i}") != null ? PlayerPrefs.GetInt($"score{i}") : 0)}\n";
+            text += $"{i+1} - {string.Format("{0:000000}", PlayerPrefs.GetInt($"score{i}") != null ? PlayerPrefs.GetInt($"score{i}") : 0)}\n";
         }
         scoreText.text = text;
     }
