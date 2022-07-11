@@ -169,6 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BOB: 107
+  side: 1
   timePassed: 0
   interval: 0
 --- !u!61 &7075180
@@ -294,6 +295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BOB: 105
+  side: 1
   timePassed: 0
   interval: 0
 --- !u!61 &66363859
@@ -419,6 +421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BOB: 44
+  side: 1
   timePassed: 0
   interval: 0
 --- !u!61 &113944738
@@ -528,7 +531,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1193966411}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -683,6 +686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BOB: 119
+  side: 0
   timePassed: 0
   interval: 0
 --- !u!61 &202672025
@@ -808,6 +812,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BOB: 118
+  side: 0
   timePassed: 0
   interval: 0
 --- !u!61 &324222074
@@ -933,6 +938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BOB: 117
+  side: 1
   timePassed: 0
   interval: 0
 --- !u!61 &351142874
@@ -1058,6 +1064,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BOB: 106
+  side: 1
   timePassed: 0
   interval: 0
 --- !u!61 &366663830
@@ -1148,7 +1155,6 @@ GameObject:
   - component: {fileID: 434215067}
   - component: {fileID: 434215066}
   - component: {fileID: 434215065}
-  - component: {fileID: 434215064}
   m_Layer: 0
   m_Name: Main Camera (1)
   m_TagString: MainCamera
@@ -1156,19 +1162,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &434215064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 434215063}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 096e557b2155596438f3aacc9581d59a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 2800000, guid: 8d39919db761ecc40a8f1284f898f3c9, type: 3}
 --- !u!81 &434215065
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1280,6 +1273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BOB: 100
+  side: 0
   timePassed: 0
   interval: 0
 --- !u!61 &641212180
@@ -1384,11 +1378,11 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 679382925}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1193966411}
+  m_Father: {fileID: 956065443}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1539,6 +1533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BOB: 111
+  side: 1
   timePassed: 0
   interval: 0
 --- !u!61 &699005373
@@ -1664,6 +1659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BOB: 99
+  side: 0
   timePassed: 0
   interval: 0
 --- !u!61 &775984474
@@ -1825,6 +1821,58 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &956065442
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 956065443}
+  - component: {fileID: 956065444}
+  m_Layer: 5
+  m_Name: scoreboard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &956065443
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956065442}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 679382926}
+  m_Father: {fileID: 1193966411}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &956065444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956065442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19cadfd2369e21e499ceee200a69e2a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  pointsPerMole: 10
+  scoreText: {fileID: 679382927}
 --- !u!1 &966359744
 GameObject:
   m_ObjectHideFlags: 0
@@ -1954,7 +2002,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1193966411}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2007,6 +2055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BOB: 120
+  side: 0
   timePassed: 0
   interval: 0
 --- !u!61 &976915654
@@ -2177,6 +2226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BOB: 110
+  side: 1
   timePassed: 0
   interval: 0
 --- !u!61 &1176163667
@@ -2302,6 +2352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BOB: 109
+  side: 1
   timePassed: 0
   interval: 0
 --- !u!61 &1185937699
@@ -2427,6 +2478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BOB: 122
+  side: 0
   timePassed: 0
   interval: 0
 --- !u!61 &1192260295
@@ -2518,7 +2570,6 @@ GameObject:
   - component: {fileID: 1193966415}
   - component: {fileID: 1193966414}
   - component: {fileID: 1193966413}
-  - component: {fileID: 1193966412}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2537,10 +2588,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 679382926}
   - {fileID: 1215884876}
   - {fileID: 966359747}
   - {fileID: 176767467}
+  - {fileID: 956065443}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2549,21 +2600,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1193966412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1193966410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19cadfd2369e21e499ceee200a69e2a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 0
-  pointsPerMole: 10
-  scoreText: {fileID: 679382927}
 --- !u!114 &1193966413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2655,7 +2691,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1193966411}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2897,6 +2933,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BOB: 101
+  side: 0
   timePassed: 0
   interval: 0
 --- !u!61 &1374829750
@@ -3022,6 +3059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BOB: 112
+  side: 1
   timePassed: 0
   interval: 0
 --- !u!61 &1450976865
@@ -3147,6 +3185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BOB: 115
+  side: 0
   timePassed: 0
   interval: 0
 --- !u!61 &1483573729
@@ -3272,6 +3311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BOB: 102
+  side: 0
   timePassed: 0
   interval: 0
 --- !u!61 &1575469697
@@ -3397,6 +3437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BOB: 113
+  side: 0
   timePassed: 0
   interval: 0
 --- !u!61 &1634270264
@@ -3588,6 +3629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BOB: 104
+  side: 1
   timePassed: 0
   interval: 0
 --- !u!61 &1720322026
@@ -3713,6 +3755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BOB: 97
+  side: 0
   timePassed: 0
   interval: 0
 --- !u!61 &1867983060
@@ -3838,6 +3881,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BOB: 108
+  side: 1
   timePassed: 0
   interval: 0
 --- !u!61 &1928369871
@@ -3963,6 +4007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BOB: 98
+  side: 1
   timePassed: 0
   interval: 0
 --- !u!61 &1959625932
@@ -4088,6 +4133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BOB: 114
+  side: 0
   timePassed: 0
   interval: 0
 --- !u!61 &2108275834

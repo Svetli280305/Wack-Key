@@ -2,7 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AppearDisappear : MonoBehaviour
+public enum Sides {
+    left,
+    right
+}
+
+public class AppearDisappear2 : MonoBehaviour
 {
 
     BoxCollider2D Taj;
@@ -52,20 +57,16 @@ public class AppearDisappear : MonoBehaviour
             Taj.enabled = false;
 
             timePassed = 0;
-            interval = Random.Range(1.0f, 5.0f);
-
-            ScoreBoard s = FindObjectOfType<ScoreBoard>();
-            s.AddPoints();
-            
-            /*
-                if (side == Sides.left) {
-                    ScoreBoard s = FindObjectOfType<ScoreBoard>();
-                    s.AddPoints();
-                } else if (side == Sides.right) {
-                    ScoreBoard2 s2 = FindObjectOfType<ScoreBoard2>();
-                    s2.AddPoints();
-                }
-            */
+            interval = Random.Range(1.0f, 5.0f);      
+        
+            if (side == Sides.left) {
+                ScoreBoard s = FindObjectOfType<ScoreBoard>();
+                s.AddPoints();
+            } else if (side == Sides.right) {
+                 ScoreBoard2 s2 = FindObjectOfType<ScoreBoard2>();
+                s2.AddPoints();
+            }
+    
         }
     }
 
@@ -90,3 +91,4 @@ public class AppearDisappear : MonoBehaviour
         return sprites[Random.Range(0, sprites.Length)];
     }
 }
+

@@ -20,8 +20,6 @@ public class Timer : MonoBehaviour
             ScoreBoard sb = FindObjectOfType<ScoreBoard>();
             Debug.Log(sb);
             sb.SaveScore();
-            // game over
-            SceneManager.LoadScene(0);
         }
         timerText.text = $"{Mathf.Round(timer)}";
     }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using TMPro;
 using System.Linq;
 
-public class ScoreBoard : MonoBehaviour
+public class ScoreBoard2 : MonoBehaviour
 {
     public int score;
     public int pointsPerMole = 1;
